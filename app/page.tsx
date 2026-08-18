@@ -58,8 +58,6 @@ const email = "mazahir.m2005@gmail.com";
 
 const cvPath = "/Muhammad-Mazahir-CV.pdf";
 
-const profileImage = "/Muhammad%20Mazahir.jpg";
-
 export default function Home() {
   return (
     <main className="min-h-screen bg-white text-slate-900">
@@ -122,9 +120,10 @@ export default function Home() {
 
       {/* HERO */}
       <section className="flex min-h-screen items-center px-6 pt-24">
-        <div className="mx-auto grid w-full max-w-6xl items-center gap-14 py-20 md:grid-cols-[1.35fr_0.65fr]">
+        <div className="mx-auto grid w-full max-w-6xl items-center gap-12 py-16 md:grid-cols-[1.25fr_0.75fr] md:gap-16 md:py-20">
+          
           {/* HERO CONTENT */}
-          <div>
+          <div className="order-2 text-center md:order-1 md:text-left">
             <p className="mb-5 text-sm font-semibold uppercase tracking-[0.22em] text-blue-600">
               Information Technology Student
             </p>
@@ -137,14 +136,14 @@ export default function Home() {
               Backend &amp; Full-Stack Developer
             </h2>
 
-            <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-600">
+            <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-slate-600 md:mx-0">
               I build practical web applications using Java, Spring Boot,
               REST APIs, Next.js, React, and SQL-based databases, with a
               strong focus on backend development and software engineering.
             </p>
 
             {/* HERO BUTTONS */}
-            <div className="mt-9 flex flex-wrap gap-4">
+            <div className="mt-9 flex flex-wrap justify-center gap-4 md:justify-start">
               <a
                 href="#projects"
                 className="rounded-full bg-slate-900 px-6 py-3 font-medium text-white transition hover:bg-blue-600"
@@ -172,7 +171,7 @@ export default function Home() {
             </div>
 
             {/* TECHNOLOGY HIGHLIGHTS */}
-            <div className="mt-10 flex flex-wrap gap-x-3 gap-y-2 text-sm text-slate-500">
+            <div className="mt-10 flex flex-wrap justify-center gap-x-3 gap-y-2 text-sm text-slate-500 md:justify-start">
               <span>Java</span>
               <span>•</span>
               <span>Spring Boot</span>
@@ -186,22 +185,22 @@ export default function Home() {
           </div>
 
           {/* PROFILE PHOTO */}
-          <div className="hidden justify-end md:flex">
+          <div className="order-1 flex justify-center md:order-2 md:justify-end">
             <div className="relative">
-              {/* Decorative square */}
-              <div className="absolute -right-5 -top-5 h-24 w-24 rounded-2xl border border-blue-100 bg-blue-50" />
 
-              {/* Photo container */}
-              <div className="relative h-[390px] w-[310px] overflow-hidden rounded-[2rem] border border-slate-200 bg-slate-100 shadow-sm">
+              {/* Decorative shape */}
+              <div className="absolute -right-4 -top-4 h-20 w-20 rounded-2xl border border-blue-100 bg-blue-50 sm:h-24 sm:w-24" />
+
+              <div className="absolute -bottom-4 -left-4 h-16 w-16 rounded-2xl border border-slate-200 bg-slate-50 sm:h-20 sm:w-20" />
+
+              {/* Photo */}
+              <div className="relative h-72 w-60 overflow-hidden rounded-[2rem] border border-slate-200 bg-slate-100 shadow-sm sm:h-80 sm:w-64 md:h-96 md:w-72">
                 <img
-                  src={profileImage}
+                  src="/Muhammad Mazahir.jpg"
                   alt="Muhammad Mazahir"
                   className="h-full w-full object-cover object-center"
                 />
               </div>
-
-              {/* Small accent */}
-              <div className="absolute -bottom-4 -left-4 h-16 w-16 rounded-2xl border border-slate-200 bg-white shadow-sm" />
             </div>
           </div>
         </div>
@@ -246,10 +245,7 @@ export default function Home() {
       </section>
 
       {/* SKILLS */}
-      <section
-        id="skills"
-        className="px-6 py-24"
-      >
+      <section id="skills" className="px-6 py-24">
         <div className="mx-auto max-w-6xl">
           <p className="text-sm font-semibold uppercase tracking-[0.2em] text-blue-600">
             Technical Skills
@@ -260,25 +256,10 @@ export default function Home() {
           </h2>
 
           <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-            <SkillGroup
-              title="Backend"
-              skills={skills.backend}
-            />
-
-            <SkillGroup
-              title="Frontend"
-              skills={skills.frontend}
-            />
-
-            <SkillGroup
-              title="Database"
-              skills={skills.database}
-            />
-
-            <SkillGroup
-              title="Tools"
-              skills={skills.tools}
-            />
+            <SkillGroup title="Backend" skills={skills.backend} />
+            <SkillGroup title="Frontend" skills={skills.frontend} />
+            <SkillGroup title="Database" skills={skills.database} />
+            <SkillGroup title="Tools" skills={skills.tools} />
           </div>
         </div>
       </section>
@@ -294,6 +275,7 @@ export default function Home() {
           </p>
 
           <div className="mt-8 overflow-hidden rounded-[2rem] border border-slate-200 bg-white shadow-sm">
+
             {/* MAIN PROJECT IMAGE */}
             <div className="flex justify-center overflow-hidden bg-slate-100 p-4 sm:p-8">
               <img
@@ -354,7 +336,6 @@ export default function Home() {
                       "Admin dashboard",
                       "Student management",
                       "Role-based access",
-                      "Session-based authentication",
                       "Session timeout handling",
                       "Activity logging",
                       "Webhook functionality",
@@ -495,10 +476,7 @@ export default function Home() {
       </section>
 
       {/* EXPERIENCE */}
-      <section
-        id="experience"
-        className="px-6 py-24"
-      >
+      <section id="experience" className="px-6 py-24">
         <div className="mx-auto max-w-6xl">
           <p className="text-sm font-semibold uppercase tracking-[0.2em] text-blue-600">
             Experience
@@ -546,9 +524,7 @@ export default function Home() {
       </section>
 
       {/* EDUCATION */}
-      <section
-        className="border-t border-slate-100 bg-slate-50 px-6 py-24"
-      >
+      <section className="border-t border-slate-100 bg-slate-50 px-6 py-24">
         <div className="mx-auto max-w-6xl">
           <p className="text-sm font-semibold uppercase tracking-[0.2em] text-blue-600">
             Education
@@ -571,10 +547,7 @@ export default function Home() {
       </section>
 
       {/* CONTACT */}
-      <section
-        id="contact"
-        className="px-6 py-24"
-      >
+      <section id="contact" className="px-6 py-24">
         <div className="mx-auto max-w-4xl rounded-[2rem] bg-slate-900 px-8 py-16 text-center text-white sm:px-12">
           <p className="text-sm font-semibold uppercase tracking-[0.2em] text-blue-300">
             Get In Touch
@@ -591,6 +564,7 @@ export default function Home() {
           </p>
 
           <div className="mt-8 flex flex-wrap justify-center gap-4">
+
             {/* EMAIL */}
             <a
               href={`https://mail.google.com/mail/?view=cm&fs=1&to=${email}`}
