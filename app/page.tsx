@@ -8,45 +8,67 @@ const skills = {
     "Webhooks",
     "API Integration",
   ],
-  frontend: ["Next.js", "React", "HTML", "CSS", "Tailwind CSS"],
-  database: ["Oracle Database", "MySQL", "SQL"],
-  tools: ["Git / GitHub", "Postman", "IntelliJ IDEA", "VS Code"],
+  frontend: [
+    "Next.js",
+    "React",
+    "HTML",
+    "CSS",
+    "Tailwind CSS",
+  ],
+  database: [
+    "Oracle Database",
+    "MySQL",
+    "SQL",
+  ],
+  tools: [
+    "Git / GitHub",
+    "Postman",
+    "IntelliJ IDEA",
+    "VS Code",
+  ],
 };
 
 const projectImages = [
   {
     src: "/Screenshot 2026-08-11 191702.png",
     title: "Student Dashboard",
-    description: "Student-facing dashboard and application overview.",
+    description:
+      "Student-facing dashboard and application overview.",
   },
   {
     src: "/Screenshot 2026-08-12 002922.png",
     title: "Admin Dashboard",
-    description: "Administrative dashboard for managing the system.",
+    description:
+      "Administrative dashboard for managing the system.",
   },
   {
     src: "/Screenshot 2026-08-11 192502.png",
     title: "All Students",
-    description: "Student management interface for viewing student records.",
+    description:
+      "Student management interface for viewing student records.",
   },
   {
     src: "/Screenshot 2026-08-11 192956.png",
     title: "Add Student",
-    description: "Interface for adding new student records.",
+    description:
+      "Interface for adding new student records.",
   },
   {
     src: "/Screenshot 2026-08-11 193035.png",
     title: "Create New Administrator",
-    description: "Administrator account creation interface.",
+    description:
+      "Administrator account creation interface.",
   },
   {
     src: "/Screenshot 2026-08-11 192018.png",
     title: "Change Password",
-    description: "Account password management interface.",
+    description:
+      "Account password management interface.",
   },
 ];
 
-const githubProfile = "https://github.com/mazahirm2005-cpu";
+const githubProfile =
+  "https://github.com/mazahirm2005-cpu";
 
 const projectGithub =
   "https://github.com/mazahirm2005-cpu/student-management-system";
@@ -61,7 +83,7 @@ const cvPath = "/Muhammad-Mazahir-CV.pdf";
 export default function Home() {
   return (
     <main className="min-h-screen bg-white text-slate-900">
-      {/* NAVBAR */}
+      {/* ================= NAVBAR ================= */}
       <nav className="fixed top-0 z-50 w-full border-b border-slate-200/80 bg-white/90 backdrop-blur-xl">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
           <a
@@ -118,12 +140,12 @@ export default function Home() {
         </div>
       </nav>
 
-      {/* HERO */}
+      {/* ================= HERO ================= */}
       <section className="flex min-h-screen items-center px-6 pt-24">
-        <div className="mx-auto grid w-full max-w-6xl items-center gap-12 py-16 md:grid-cols-[1.25fr_0.75fr] md:gap-16 md:py-20">
+        <div className="mx-auto grid w-full max-w-6xl items-center gap-14 py-20 md:grid-cols-[1.35fr_0.65fr]">
           
           {/* HERO CONTENT */}
-          <div className="order-2 text-center md:order-1 md:text-left">
+          <div>
             <p className="mb-5 text-sm font-semibold uppercase tracking-[0.22em] text-blue-600">
               Information Technology Student
             </p>
@@ -136,14 +158,14 @@ export default function Home() {
               Backend &amp; Full-Stack Developer
             </h2>
 
-            <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-slate-600 md:mx-0">
+            <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-600">
               I build practical web applications using Java, Spring Boot,
               REST APIs, Next.js, React, and SQL-based databases, with a
               strong focus on backend development and software engineering.
             </p>
 
             {/* HERO BUTTONS */}
-            <div className="mt-9 flex flex-wrap justify-center gap-4 md:justify-start">
+            <div className="mt-9 flex flex-wrap gap-4">
               <a
                 href="#projects"
                 className="rounded-full bg-slate-900 px-6 py-3 font-medium text-white transition hover:bg-blue-600"
@@ -171,7 +193,7 @@ export default function Home() {
             </div>
 
             {/* TECHNOLOGY HIGHLIGHTS */}
-            <div className="mt-10 flex flex-wrap justify-center gap-x-3 gap-y-2 text-sm text-slate-500 md:justify-start">
+            <div className="mt-10 flex flex-wrap gap-x-3 gap-y-2 text-sm text-slate-500">
               <span>Java</span>
               <span>•</span>
               <span>Spring Boot</span>
@@ -184,21 +206,22 @@ export default function Home() {
             </div>
           </div>
 
-          {/* PROFILE PHOTO */}
-          <div className="order-1 flex justify-center md:order-2 md:justify-end">
-            <div className="relative">
+          {/* ================= PROFILE PHOTO ================= */}
+          <div className="flex justify-center md:justify-end">
+            <div className="relative w-full max-w-sm">
+              
+              {/* Decorative Shape - Top Right */}
+              <div className="absolute -right-3 -top-3 h-20 w-20 rounded-2xl border border-blue-100 bg-blue-50" />
 
-              {/* Decorative shape */}
-              <div className="absolute -right-4 -top-4 h-20 w-20 rounded-2xl border border-blue-100 bg-blue-50 sm:h-24 sm:w-24" />
+              {/* Decorative Shape - Bottom Left */}
+              <div className="absolute -bottom-3 -left-3 h-20 w-20 rounded-2xl border border-slate-200 bg-slate-50" />
 
-              <div className="absolute -bottom-4 -left-4 h-16 w-16 rounded-2xl border border-slate-200 bg-slate-50 sm:h-20 sm:w-20" />
-
-              {/* Photo */}
-              <div className="relative h-72 w-60 overflow-hidden rounded-[2rem] border border-slate-200 bg-slate-100 shadow-sm sm:h-80 sm:w-64 md:h-96 md:w-72">
+              {/* Photo Container */}
+              <div className="relative overflow-hidden rounded-[2rem] border border-slate-200 bg-white p-2 shadow-sm">
                 <img
                   src="/Muhammad Mazahir.jpg"
                   alt="Muhammad Mazahir"
-                  className="h-full w-full object-cover object-center"
+                  className="block aspect-[4/5] w-full rounded-[1.5rem] object-cover object-center"
                 />
               </div>
             </div>
@@ -206,7 +229,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ABOUT */}
+      {/* ================= ABOUT ================= */}
       <section
         id="about"
         className="border-t border-slate-100 bg-slate-50 px-6 py-24"
@@ -224,28 +247,31 @@ export default function Home() {
             <div className="space-y-5 leading-7 text-slate-600">
               <p>
                 I am an Information Technology undergraduate at Sir Syed
-                University of Engineering &amp; Technology, Karachi, focused
-                on backend and full-stack web development.
+                University of Engineering &amp; Technology, Karachi,
+                focused on backend and full-stack web development.
               </p>
 
               <p>
-                My practical experience includes developing applications with
-                Java, Spring Boot, REST APIs, Next.js, React, Oracle, SQL, and
-                JPA/Hibernate.
+                My practical experience includes developing applications
+                with Java, Spring Boot, REST APIs, Next.js, React, Oracle,
+                SQL, and JPA/Hibernate.
               </p>
 
               <p>
                 I enjoy understanding how frontend applications, backend
-                services, APIs, and databases work together to build complete
-                software systems.
+                services, APIs, and databases work together to build
+                complete software systems.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* SKILLS */}
-      <section id="skills" className="px-6 py-24">
+      {/* ================= SKILLS ================= */}
+      <section
+        id="skills"
+        className="px-6 py-24"
+      >
         <div className="mx-auto max-w-6xl">
           <p className="text-sm font-semibold uppercase tracking-[0.2em] text-blue-600">
             Technical Skills
@@ -256,15 +282,30 @@ export default function Home() {
           </h2>
 
           <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-            <SkillGroup title="Backend" skills={skills.backend} />
-            <SkillGroup title="Frontend" skills={skills.frontend} />
-            <SkillGroup title="Database" skills={skills.database} />
-            <SkillGroup title="Tools" skills={skills.tools} />
+            <SkillGroup
+              title="Backend"
+              skills={skills.backend}
+            />
+
+            <SkillGroup
+              title="Frontend"
+              skills={skills.frontend}
+            />
+
+            <SkillGroup
+              title="Database"
+              skills={skills.database}
+            />
+
+            <SkillGroup
+              title="Tools"
+              skills={skills.tools}
+            />
           </div>
         </div>
       </section>
 
-      {/* PROJECT */}
+      {/* ================= PROJECT ================= */}
       <section
         id="projects"
         className="border-t border-slate-100 bg-slate-50 px-6 py-24"
@@ -275,7 +316,7 @@ export default function Home() {
           </p>
 
           <div className="mt-8 overflow-hidden rounded-[2rem] border border-slate-200 bg-white shadow-sm">
-
+            
             {/* MAIN PROJECT IMAGE */}
             <div className="flex justify-center overflow-hidden bg-slate-100 p-4 sm:p-8">
               <img
@@ -298,9 +339,9 @@ export default function Home() {
 
                 <p className="mt-5 max-w-3xl leading-7 text-slate-600">
                   A full-stack student management application built with
-                  Next.js and Spring Boot, integrating Oracle Database through
-                  JPA/Hibernate and using REST APIs for frontend-backend
-                  communication.
+                  Next.js and Spring Boot, integrating Oracle Database
+                  through JPA/Hibernate and using REST APIs for
+                  frontend-backend communication.
                 </p>
 
                 {/* TECHNOLOGIES */}
@@ -323,7 +364,7 @@ export default function Home() {
                   ))}
                 </div>
 
-                {/* FEATURES */}
+                {/* KEY FEATURES */}
                 <div className="mt-10">
                   <h3 className="text-lg font-semibold">
                     Key Features
@@ -336,6 +377,7 @@ export default function Home() {
                       "Admin dashboard",
                       "Student management",
                       "Role-based access",
+                      "Session-based authentication",
                       "Session timeout handling",
                       "Activity logging",
                       "Webhook functionality",
@@ -364,7 +406,7 @@ export default function Home() {
               </div>
             </div>
 
-            {/* PROJECT GALLERY */}
+            {/* ================= PROJECT GALLERY ================= */}
             <div className="border-t border-slate-200 p-8 sm:p-10 lg:p-12">
               <div>
                 <p className="text-sm font-semibold uppercase tracking-[0.18em] text-blue-600">
@@ -376,7 +418,7 @@ export default function Home() {
                 </h3>
 
                 <p className="mt-3 max-w-2xl text-sm leading-6 text-slate-500">
-                  Selected interfaces from the Student Information &amp;
+                  Selected interfaces from the Student Information &
                   Management System, covering student and administrative
                   workflows.
                 </p>
@@ -435,7 +477,7 @@ export default function Home() {
                           {image.title}
                         </h4>
 
-                        <p className="mt-1 line-clamp-1 text-sm text-slate-500">
+                        <p className="mt-1 text-sm text-slate-500">
                           {image.description}
                         </p>
                       </div>
@@ -475,8 +517,11 @@ export default function Home() {
         </div>
       </section>
 
-      {/* EXPERIENCE */}
-      <section id="experience" className="px-6 py-24">
+      {/* ================= EXPERIENCE ================= */}
+      <section
+        id="experience"
+        className="px-6 py-24"
+      >
         <div className="mx-auto max-w-6xl">
           <p className="text-sm font-semibold uppercase tracking-[0.2em] text-blue-600">
             Experience
@@ -505,26 +550,28 @@ export default function Home() {
               </li>
 
               <li>
-                • Gained exposure to enterprise software development and
-                Oracle database technologies.
+                • Gained exposure to enterprise software development
+                and Oracle database technologies.
               </li>
 
               <li>
-                • Gained exposure to IT support and software development
-                workflows.
+                • Gained exposure to IT support and software
+                development workflows.
               </li>
 
               <li>
-                • Collaborated with senior technical staff in a professional
-                workplace environment.
+                • Collaborated with senior technical staff in a
+                professional workplace environment.
               </li>
             </ul>
           </div>
         </div>
       </section>
 
-      {/* EDUCATION */}
-      <section className="border-t border-slate-100 bg-slate-50 px-6 py-24">
+      {/* ================= EDUCATION ================= */}
+      <section
+        className="border-t border-slate-100 bg-slate-50 px-6 py-24"
+      >
         <div className="mx-auto max-w-6xl">
           <p className="text-sm font-semibold uppercase tracking-[0.2em] text-blue-600">
             Education
@@ -536,7 +583,8 @@ export default function Home() {
             </h2>
 
             <p className="mt-2 text-slate-600">
-              Sir Syed University of Engineering &amp; Technology, Karachi
+              Sir Syed University of Engineering &amp; Technology,
+              Karachi
             </p>
 
             <p className="mt-1 text-sm text-slate-500">
@@ -546,8 +594,11 @@ export default function Home() {
         </div>
       </section>
 
-      {/* CONTACT */}
-      <section id="contact" className="px-6 py-24">
+      {/* ================= CONTACT ================= */}
+      <section
+        id="contact"
+        className="px-6 py-24"
+      >
         <div className="mx-auto max-w-4xl rounded-[2rem] bg-slate-900 px-8 py-16 text-center text-white sm:px-12">
           <p className="text-sm font-semibold uppercase tracking-[0.2em] text-blue-300">
             Get In Touch
@@ -558,13 +609,13 @@ export default function Home() {
           </h2>
 
           <p className="mx-auto mt-5 max-w-2xl leading-7 text-slate-300">
-            I&apos;m open to software development opportunities, internships,
-            and projects where I can continue building practical engineering
-            experience.
+            I&apos;m open to software development opportunities,
+            internships, and projects where I can continue building
+            practical engineering experience.
           </p>
 
           <div className="mt-8 flex flex-wrap justify-center gap-4">
-
+            
             {/* EMAIL */}
             <a
               href={`https://mail.google.com/mail/?view=cm&fs=1&to=${email}`}
@@ -608,17 +659,23 @@ export default function Home() {
         </div>
       </section>
 
-      {/* FOOTER */}
+      {/* ================= FOOTER ================= */}
       <footer className="border-t border-slate-200 px-6 py-8">
         <div className="mx-auto flex max-w-6xl flex-col justify-between gap-3 text-sm text-slate-500 sm:flex-row">
-          <p>© 2026 Muhammad Mazahir. All rights reserved.</p>
+          <p>
+            © 2026 Muhammad Mazahir. All rights reserved.
+          </p>
 
-          <p>Built with Next.js &amp; Tailwind CSS.</p>
+          <p>
+            Built with Next.js &amp; Tailwind CSS.
+          </p>
         </div>
       </footer>
     </main>
   );
 }
+
+/* ================= SKILL GROUP ================= */
 
 function SkillGroup({
   title,
@@ -645,4 +702,3 @@ function SkillGroup({
       </div>
     </div>
   );
-}
